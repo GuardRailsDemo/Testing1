@@ -1,0 +1,211 @@
+" $query = "" SELECT
+              o.id,
+              o.code,
+              o.parent_code,
+              o.name
+                 FROM organization o
+                    where o.code in (
+                    select c.parent_code from organization c
+                    where c.code = '"". $user[0]->kode_organisasi .""'
+                        )
+           "";
+
+$organization = DB::select(DB::raw($query) );"
+"$example->saveAs('dokumen/'.$nama_file);
+
+return response()->download(public_path('dokumen/'.$nama_file));"
+"public function example(Request $request) {
+   $inputData['id'] = $request->input('id');
+   $inputData['variable'] = $request->input('variabel');
+   ...
+}"
+"$example_status = '23';
+
+$example_status = [
+            'standard_status' => '1',
+            'advance_status' => '2',
+];"
+"ExampleClass::destroy($id);
+ExampleRelation1::where(example_id, $id)->delete();
+ExampleRelation2::where(example_id, $id)->delete();"
+$example =  md5(microtime()).str_replace(" ","-",$file_name);
+"$file_path = storage_path('app/public/'.$file_name);
+return response()->download($file_path);"
+"dd($example);
+
+echo(json_encode($example));
+
+var_dump($example);"
+"//some backup sinppet
+//$something = ExampleClass::first($id); 
+//$example_uid = $something->uid;
+//$example_var = $something->var;
+
+$example_uid = $uid;
+..."
+"$response = Http::get($url);
+   if($response->successful()){
+      $response_json = $response->json();          
+      $results = $response_json['result']['results'];
+      $items = $results;
+      ...
+   ...
+   }"
+$downloadURL = str_replace(["https://example.com","http://177.30.100.101"],"https://something.co.id",$resource['url']),
+"switch ($myVariable) {
+  case 1:
+    foo();
+    break;
+  case 2:
+    do_something();
+  default:
+    do_something_else();
+   break;
+}"
+"switch ($param) {
+  case 0:
+    doSomething();
+    break;
+  default:
+    error();
+    break;
+  case 1:
+    doSomethingElse();
+    break;
+}"
+"function run() {
+  prepare('this is a duplicate');
+  execute('this is a duplicate');
+  release('this is a duplicate');
+}"
+"public function notImplemented() {  
+
+}"
+"const ConstantName1 = 'Constant Value 1';
+const constant_name_2 = 'Constant Value 2';"
+"$i = 0;
+while(true) {
+  echo(""i = $i"");
+  $i++;
+  if ($i < 10){
+    goto next;
+  }
+}
+next: ..."
+"const CONSTANT_NAME_1 = 'Constant Value 1';
+echo CONSTANT_NAME_1;
+
+const CONSTANT_NAME_1 = 'Constant Value 2';
+echo CONSTANT_NAME_1;"
+" public function getPerson($id) {
+        doSomething($id);
+        $person = getFromDB($id);
+        return $person;
+    }
+
+    public function getName($id) { 
+        doSomething($id);
+        $person = getFromDB($id);
+        $name = $person->name;
+        $return $name;
+    }"
+"function get_readable_status($is_running, $has_errors) {
+  return $is_running ? ""Running"" : ($has_errors ? ""Failure"" : ""Succeeded"");
+}"
+"$i = $a + $b;
+$i = compute();"
+"function doSomething($a, $b) {
+  return compute($b);
+}"
+"class Foo {
+
+  public function doSomething() {
+    $foo = new Foo();
+    ...
+    $foo->usedPrivateFunction();
+    ...
+  }
+
+  private function usedPrivateFunction() {
+    ...
+  }  
+
+  private function unusedPrivateFunction() {
+    ...
+  }
+}
+
+"
+"function myFunction(){
+  if (condition1) {
+    return true;
+  } else {
+    if (condition2) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  return false;
+}"
+for ($i = 0; $i < 42; $i++){}
+"protected function imagettftextjustified(&$image, $size, $angle, $left, $top, $color, $font, $text, $max_width, $minspacing = 3, $linespacing = 1, $frombottom = false) {
+       ...
+}"
+"$s = """";
+try {
+  $s = readMyFile($fileName);
+} catch (Exception $e)  {
+  throw $e;
+}"
+class my_class {...}
+"function DoSomething(){
+    ...
+}"
+"$myGlobalVariable;
+
+function foo()
+{
+  global $myGlobalVariable; 
+  $GLOBALS['myGlobalVariable']; 
+  ...
+}"
+"switch($a) {
+  case ""foo"":
+    switch($b) {
+      case ""bar"":
+        doSomething();
+      break;
+    }
+  break;
+}"
+"$u8a = ++$u8b + $u8c--;
+$foo = $bar++ / 4;"
+-
+if (someCondition) doSomething();
+$name = $_POST['name'];
+$a = $b + $c; // This is a trailing comment that can be very very long
+"class Class {
+  public $name = NULL;
+
+  public static function foo() {
+    if ($this->name != NULL) {
+      ...
+    }
+  }
+}"
+"public function testA() {
+    try {
+        assertTrue(getValue());
+    } catch (ExpectationFailedException $e) {
+
+    }
+}"
+"function getText(array $lines): string {
+    foreach ($lines as $line) {
+        $text .= $line;
+    }
+
+    return $text;
+}"
+$result = closedir($dir_handle);
